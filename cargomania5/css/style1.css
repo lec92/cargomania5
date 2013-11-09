@@ -1,0 +1,125 @@
+
+/*  comienza menu index*/
+
+
+
+
+
+/*  aqui termina el menu index */
+
+    body {
+      color:#000000;
+      background-color:#FFFFFF;
+
+
+     
+
+    }
+    a  { color:#0000FF; }
+    a:visited { color:#800080; }
+    a:hover { color:#008000; }
+    a:active { color:#FF0000; }
+    -->
+	
+
+	body{
+
+
+	font-family: 'Segoe UI', serif;
+	font-weight: normal;
+    font-style: normal;
+	text-decoration: none;
+	font-size: 10pt;
+
+	}
+	.texto_titulo {
+	font-family: 'Segoe UI', serif;
+	font-weight: normal;
+    font-style: normal;
+	text-decoration: none;
+	font-size: 27pt;
+	color:#ffffff ;
+	}
+	
+	.texto_formulario {
+	font-family: 'Segoe UI', serif;
+	font-weight: normal;
+    font-style: normal;
+	text-decoration: none;
+	font-size: 10pt;
+	color:#ffffff ;
+	}
+	
+	.input_text {
+	height:26px;
+	width:100%;
+	font-family: 'Segoe UI', serif;
+	font-weight: normal;
+    font-style: normal;
+	text-decoration: none;
+	font-size: 9pt;
+	color:#333 ;
+	}
+	
+	.text_area{
+	height:100px;
+	width:100%;
+	font-family: 'Segoe UI', serif;
+	font-weight: normal;
+    font-style: normal;
+	text-decoration: none;
+	font-size: 9pt;
+	color:#333 ;
+	
+	
+	
+	}
+	
+	.boton_aceptar {
+    background:url(../imagenes/botones/aceptar_b.jpg) no-repeat;
+    cursor:pointer;
+    width: 150px;
+    height: 34px;
+    border: none;
+	}
+	
+	.boton_cancelar {
+    background:url(../imagenes/botones/cancelar_b.jpg) no-repeat;
+    cursor:pointer;
+    width: 150px;
+    height: 34px;
+    border: none;
+	}
+	
+
+		
+#formulario:hover {
+	
+background:#006;
+
+}
+
+/*    estos son estilos efectos para las imagenes*/
+
+
+
+
+img { /* Estilos general para todas las imagenes */
+ opacity:.7; /* Opacidad al 70% */
+ -webkit-transition: .25s; /* Transición con duración de 25 milesimas */
+  /* Redondeado de 20 pixeles */
+  cursor: pointer;
+
+
+}
+img:hover { /* Estilos general para todas las imagenes cuando pasemos el cursor */
+ box-shadow: 3.75px 3.75px 15px #000; /* Sombra exterior */
+ opacity: 1; /* Opacidad al 100% */
+
+
+}
+		
+	
+	
+	
+  

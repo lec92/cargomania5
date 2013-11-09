@@ -1,0 +1,133 @@
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<style type="text/css">
+	table{
+		background-color:#F7F8E0;
+		font-family: 'Trebuchet MS', serif;
+		width: 500px;
+	}
+	caption{
+		font-size: 15pt;
+	}
+	tr{
+		background-color: #A9E2F3;
+	}
+</style>
+<script type="text/javascript">
+	function calcular(valor){
+		var cargoxvolumen=0;
+		var cargoxpeso=0;
+		var vol=document.getElementById("txtVolumen").value;
+		var peso=document.getElementById("txtPeso").value;
+		var tipoProducto=document.getElementById("lstTipo").options[document.getElementById("lstTipo").selectedIndex].value;
+		var html="";
+		var cargoAdicional=0;
+		var costo=0;
+		var pais="";
+		var unidadpeso=document.getElementById("lstUnidadPeso").options[document.getElementById("lstUnidadPeso").selectedIndex].value;
+		var unidadvol=document.getElementById("lstUnidades").options[document.getElementById("lstUnidades").selectedIndex].value;
+		var kg=0;
+		var metro=0;
+		if(unidadpeso=="lb"){
+			kg=peso/(2.2);
+		}else{
+			kg=peso;
+		}
+		if(unidadvol=="L"){
+			metro=vol/1000;
+		}else{
+			metro=vol;
+		}
+		if(valor==0 || tipoProducto==0 || vol=="" || peso==""){
+			alert("Por favor llene todos los campos");
+		}else if(isNaN(vol) || isNaN(peso)){
+			alert("Ingrese solo numeros");
+		}else if(valor==1){
+			pais="Mexico";
+			cargoxpeso=5; //Cargo por cada Kg
+			cargoxvolumen=6; //Cargo por cada metro cubico
+			totalpeso=kg*cargoxpeso;
+			totalvolumen=metro*cargoxvolumen;
+			if(tipoProducto==1){
+				cargoAdicional=1.5;
+			}else if(tipoProducto==2){
+				cargoAdicional=2;
+			}
+//			document.getElementById("resultado").innerHTML=html;
+		}else if(valor==2){
+			pais="Panama";
+			cargoxpeso=4.5; //Cargo por cada Kg
+			cargoxvolumen=5.5 //Cargo por cada metro cubico
+			totalpeso=kg*cargoxpeso;
+			totalvolumen=metro*cargoxvolumen;
+			if(tipoProducto==1){
+				cargoAdicional=1.5;
+			}else if(tipoProducto==2){
+				cargoAdicional=2;
+			}
+		}
+		else if(valor==3){
+			pais="Estados Unidos";
+			cargoxpeso=6; //Cargo por cada Kg
+			cargoxvolumen=8 //Cargo por cada metro cubico
+			totalpeso=kg*cargoxpeso;
+			totalvolumen=metro*cargoxvolumen;
+			if(tipoProducto==1){
+				cargoAdicional=5;
+			}else if(tipoProducto==2){
+				cargoAdicional=6;
+			}
+		}
+		if(pais!=""){
+			costo=(totalvolumen)+(totalpeso)+cargoAdicional;
+			//alert(metro);
+			html="Pais de procedencia: "+pais+"<br>Kilogramos: "+kg+"<br>Metros Cubicos: "+metro+"<br>El costo por cada Kilogramo desde "+pais+" es: $"+cargoxpeso+" y por cada Metro C&uacute;bico es: $"+cargoxvolumen+"<br>";
+			html+="El costo total de su paquete es: $"+costo;
+			document.getElementById("resultado").innerHTML=html;
+		}
+	}
+</script>
+<table width="" align="center">
+<form class="formulario">
+	<caption>CALCULO</caption>
+	<tr class="cat_titulo">
+		<td class="titulo">Pais Procedencia:</td>
+		<td><select name="lstPaises" id="lstPaises">
+			<option value="0">Elija un pais</option>
+			<option value="1">Mexico</option>
+			<option value="2">Panam&aacute;</option>
+			<option value="3">Estados Unidos</option>
+		</select></td>
+	</tr>
+	<tr class="cat_titulo">
+		<td class="titulo">Tipo Producto:</td>
+		<td>
+			<select name="lstTipo" id="lstTipo">
+				<option value="0">Elija un tipo</option>
+				<option value="1">Fragil</option>
+				<option value="2">Congelados</option>
+			</select>
+		</td>
+	</tr>
+	<tr class="cat_titulo">
+		<td class="titulo">Volumen:</td>
+		<td><input type="number" name="txtVolumen" id="txtVolumen" /><select id='lstUnidades'>
+			<option value="m3">Metros c&uacute;bicos</option>
+			<option value="L">Litros</option>
+		</select></td>
+	</tr>
+	<tr class="cat_titulo">
+		<td class="titulo">Peso:</td>
+		<td><input type="number" name="txtPeso" id="txtPeso" />
+		<select name="lstUnidadPeso" id="lstUnidadPeso">
+			<option value="kg">Kilogramos</option>
+			<option value="lb">Libras</option>
+		</select></td>
+	</tr>
+	<tr class="cat_titulo">
+		<td class="titulo" colspan="2"><input type="button" name="btnEnviar" value="Calcular" onclick="calcular(document.getElementById('lstPaises').options[document.getElementById('lstPaises').selectedIndex].value)"></td>
+	</tr>
+	<tr class="cat_titulo">
+		<td colspan="2" class="titulo"><div id='resultado'></div></td>
+	</tr>
+</form>
+</table>

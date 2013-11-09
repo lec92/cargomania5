@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta name="description" content="Drag and drop table content with JavaScript"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no"/><!-- "position: fixed" fix for Android 2.2+ -->
+		<script type="text/javascript" src="redips-drag-min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		
+		<script type="text/javascript">
+		function popup(url,ancho,alto) {
+		var posicion_x; 
+		var posicion_y; 
+		posicion_x=(screen.width/2)-(ancho/2); 
+		posicion_y=(screen.height/2)-(alto/2); 
+		window.open(url, "", "width="+ancho+",height="+alto+",menubar=0,toolbar=0,directories=0,scrollbars=no,resizable=no,left="+posicion_x+",top="+posicion_y+"");
+		}
+		</script> 
+		
+	</head>
+	<body>
+	<center>
+		<div id="main_container">
+			<div id="drag">
+				<div id="left">
+					<table id="table1">
+						<colgroup>
+							<col width="250"/>
+							<col width="250"/>
+							<col width="250"/>
+							<col width="250"/>
+							<col width="250"/>
+						</colgroup>
+						<tbody>
+							<tr>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_empleado',450,850)"><img src="images/empleado.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_cliente',450,850)"><img src="images/cliente.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_proveedor',450,450)"><img src="images/proveedor.png" /></a></div></td>
+							</tr>
+							<tr>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_aduana_llegada',450,750)"><img src="images/aduana.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_agentebodega',450,650)"><img src="images/agentes.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_archivo.html',450,450)"><img src="images/archivos.png" /></a></div></td>
+							</tr>
+							<tr>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_serviciobodega',450,850)"><img src="images/bodega.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=contenedor',1300,600)"><img src="images/contenedor.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('formularios/etd.html',500,700)"><img src="images/documentacion.png" /></a></div></td>
+							</tr>
+							<tr>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('formularios/Estadistica.html',1050,850)"><img src="images/estadisticas.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('formularios/factura.html',800,780)"><img src="images/factura.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_mercaderia',450,650)"><img src="images/mercaderia.png" /></a></div></td>
+							</tr>
+							<tr>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=servicios',1300,600)"><img src="images/servicio.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('formularios/manual.html',650,450)"><img src="images/soporte.png" /></a></div></td>
+							<td><div id="link1" class="drag t1"><a href="javascript:popup('?mod=agregar_tarifa',450,450)"><img src="images/tarifario.png" /></a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		</center>
+	</body>
+</html>

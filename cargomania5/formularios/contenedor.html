@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <link href="../css/style4.css" rel="stylesheet" type="text/css">
+    <title>Cargomania - Contenedores</title>
+<script language="JavaScript">
+function toggle(source) {
+  checkboxes = document.getElementsByName('contenedor');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+</script>
+  </head>
+  <body><img src="../imagenes/logo.png" width="250px">
+    <table class="formulario" border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td colspan="3" rowspan="1" class="titulo"><span class="tittle_text">
+              <center>Contenedor</center>
+            </span></td>
+        </tr>
+        <tr>
+          <td width="569"><br>
+          </td>
+          <td width="410"><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td class="categoria"><table width="565" border="0">
+            <tr>
+              <td width="329">Pais
+<select name="select" class="select_pais_style">
+                <option value="0" selected="selected">Estados Unidos</option>
+                <option value="1">Japon</option>
+              </select></td>
+              <td width="226">Transporte
+                <select name="select2" id="select">
+                  <option>seleccionar</option>
+                  <option>Maritimo</option>
+                  <option>Terrestre</option>
+                  <option>Aereo</option>
+              </select></td>
+            </tr>
+          </table></td>
+                    <td class="categoria">Fecha <input class="text_area" name="test" type="date"></td>
+
+          <td width="150" class="categoria">Estado <select class="select_status_style">
+              <option value="0" selected="selected">En espera...</option>
+              <option value="1">Cargado</option>
+              <option value="2">Pendiente</option>
+              <option value="3">Anulado</option>
+            </select></td>
+        </tr>
+        <tr>
+         <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>       
+        </tr>
+        <tr>
+          <td align="left" class="categoria">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" onClick="toggle(this)"> Seleccionar todos</td>
+          <td><br>
+          </td>
+        </tr>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="1">
+            <table class="formulario" border="1" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr class="cat_titulo">
+                  <td>Agregar </td>
+                  <td>N°</td>
+                  <td>Proveedor</td>
+                  <td>Cliente</td>
+                  <td>Bultos</td>
+                  <td>Peso Kgs</td>
+                  <td>Volumen</td>
+                  <td>Descripcion</td>
+                  <td>Tipo Movimiento</td>
+                  <td>Estado</td>
+                  <td>Contenedor</td>
+                  <td>Capacidad</td>
+                  <td>Agregar </td>
+                  <td>Editar </td>
+                  <td>Eliminar </td>
+                </tr>
+                <tr>
+                  <td align="center"><input type="checkbox" name="contenedor">
+                  </td>
+                  <td>SAL0501</td>
+                  <td>SAMSUNG ELECTRONICS LATINOAMERICA SA</td>
+                  <td>DISTRIBUIDORA AGELSA SA DE CV</td>
+                  <td>3</td>
+                  <td>1300.00</td>
+                  <td>8.84</td>
+                  <td>REPRODUCTOR DVD</td>
+                  <td>MARÍTIMO</td>
+                  <td>En espera...</td>
+                  <td><select class="select_contenedor_style">
+              <option value="0" selected="selected">SMLU784405-8</option>
+            </select></td>
+              <td align="center"><progress class="progreso" max="100" value="50"></progress></td>
+             <td align="center"> <button value="Cancelar" name="cancelar">OK</button></td>
+                  <td align="center"><img title="Editar" src="imagenes/botones/editar.png">
+                  </td>
+                  <td align="center"><img title="Eliminar" src="imagenes/botones/eliminar.gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"><input type="checkbox" name="contenedor">
+                  </td>                  
+                  <td>SAL0502</td>
+                  <td>SYL INTERNATIONAL</td>
+                  <td>DISTRIBUIDORA AGELSA SA DE CV</td>
+                  <td>1</td>
+                  <td>1177.00</td>
+                  <td>1.00</td>
+                  <td>CADENAS, EMPATE DE CADENAS, BALINERA DE BOLA</td>
+                  <td>MARÍTIMO</td>
+                  <td>En espera...</td>
+                  <td><select class="select_contenedor_style">
+              <option value="0" selected="selected">SMLU784405-8</option>
+            </select></td>
+              <td align="center"><progress class="progreso" max="100" value="50"></progress></td>
+             <td align="center"> <button value="Cancelar" name="cancelar">OK</button></td>
+                  <td align="center"><img title="Editar" src="imagenes/botones/editar.png">
+                  </td>
+                  <td align="center"><img title="Eliminar" src="imagenes/botones/eliminar.gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"><input type="checkbox" name="contenedor">
+                  </td>
+                  <td>SAL0503</td>
+                  <td>CONNEXION ZONA LIBRE SA</td>
+                  <td>DISTRIBUIDORA AGELSA SA DE CV</td>
+                  <td>181</td>
+                  <td>3291.04</td>
+                  <td>10.97</td>
+                  <td>ACCESORIOS PARA AUTOS</td>
+                  <td>MARÍTIMO</td>
+                  <td>En espera...</td>
+                  <td><select class="select_contenedor_style">
+              <option value="0" selected="selected">SMLU784405-8</option>
+            </select></td>
+              <td align="center"><progress class="progreso" max="100" value="50"></progress></td>
+             <td align="center"> <button value="Cancelar" name="cancelar">OK</button></td>
+                  <td align="center"><img title="Editar" src="imagenes/botones/editar.png">
+                  </td>
+                  <td align="center"><img title="Eliminar" src="imagenes/botones/eliminar.gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"><input type="checkbox" name="contenedor">
+                  </td>
+                  <td>SAL0504</td>
+                  <td>NORITEX SA</td>
+                  <td>DISTRIBUIDORA AGELSA SA DE CV</td>
+                  <td>647</td>
+                  <td>6393.02</td>
+                  <td>31.74</td>
+                  <td>ARTICULOS PARA EL HOGAR</td>      
+                  <td>MARÍTIMO</td>
+                  <td>En espera...</td>
+                  <td><select class="select_contenedor_style">
+              <option value="0" selected="selected">SMLU784405-8</option>
+            </select></td>
+              <td align="center"><progress class="progreso" max="100" value="50"></progress></td>
+             <td align="center"> <button value="Cancelar" name="cancelar">OK</button></td>
+                  <td align="center"><img title="Editar" src="imagenes/botones/editar.png">
+                  </td>
+                  <td align="center"><img title="Eliminar" src="imagenes/botones/eliminar.gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"><input type="checkbox" name="contenedor">
+                  </td>
+                  <td>SAL0505</td>
+                  <td>ZAGA ENTERPRISSE</td>
+                  <td>DISTRIBUIDORA AGELSA SA DE CV</td>
+                  <td>70</td>
+                  <td>578.00</td>
+                  <td>2.44</td>
+                  <td>PANTALONES CORTOS PARA HOMBRES</td>
+                  <td>MARÍTIMO</td>
+                  <td>En espera...</td>
+                  <td><select class="select_contenedor_style">
+              <option value="0" selected="selected">SMLU784405-8</option>
+            </select></td>
+              <td align="center"><progress class="progreso" max="100" value="50"></progress></td>
+             <td align="center"> <button value="Cancelar" name="cancelar">OK</button></td>
+                  <td align="center"><img title="Editar" src="imagenes/botones/editar.png">
+                  </td>
+                  <td align="center"><img title="Eliminar" src="imagenes/botones/eliminar.gif">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr align="right">
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td class="categoria">Peso total: <label class="text_area">12739.06
+              kg</label></td>
+        </tr>
+        <tr align="right">
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td class="categoria">Volumen total: <label class="text_area">54.99
+              m3</label></td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Cargar todos los seleccionados:<br>
+            <select class="select_contenedor_style">
+              <option value="0" selected="selected">SMLU784405-8</option>
+              <option value="1">SMLU784405-8</option>
+              <option value="2">SMLU784405-8</option>
+            </select>
+            <progress class="progreso" max="100" value="50"></progress>
+          </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            <a target="_blank" href="formularios/manifiesto.html">Generar Manifiesto</href>
+              <a target="_blank" href="formularios/mapa.html">Generar Traking</href>
+</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td align="right"><button value="Cancelar" name="cancelar">CANCELAR</button></td>
+          <td><button value="Cargar" name="cargar">CARGAR</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

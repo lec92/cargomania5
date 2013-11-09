@@ -1,0 +1,40 @@
+
+/*  comienza menu index*/
+
+
+
+
+
+
+	
+	
+
+		
+#formulario:hover {
+	
+background:#006;
+
+}
+
+/*    estos son estilos efectos para las imagenes*/
+
+
+
+
+img { /* Estilos general para todas las imagenes */
+ opacity:.7; /* Opacidad al 70% */
+ -webkit-transition: .25s; /* Transición con duración de 25 milesimas */
+  /* Redondeado de 20 pixeles */
+  cursor: pointer;
+
+
+}
+img:hover { /* Estilos general para todas las imagenes cuando pasemos el cursor */
+ box-shadow: 3.75px 3.75px 15px #000; /* Sombra exterior */
+ opacity: 1; /* Opacidad al 100% */
+
+
+}
+		
+	
+	
